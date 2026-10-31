@@ -2,3 +2,15 @@ node_modules/
 data/
 .env
 *.log
+
+# Sensitive files
+certs/
+*.pem
+*.key
+
+# Dependencies
+node_modules/
+
+# macOS metadata
+._*
+.DS_Store
