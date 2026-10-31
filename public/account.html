@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>账号 · 中国行政区划</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./account.js" defer></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="shell masthead-inner">
+        <div class="brand" aria-label="中国行政区划">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>行政区划目录</span>
+        </div>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./divisions.html">行政区划</a>
+          <a href="./account.html" aria-current="page">账号</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell account-layout">
+      <div class="account-context">
+        <p class="eyebrow">ACCOUNT ACCESS</p>
+        <h1>你的账号</h1>
+        <p>使用邮箱创建账号，完成邮件验证后即可登录。行政区划目录始终可以直接查阅。</p>
+        <a href="./divisions.html">前往行政区划目录 <span aria-hidden="true">→</span></a>
+      </div>
+      <section class="auth-panel" aria-label="账号操作">
+        <div id="auth-loading" class="auth-message">正在读取账号状态…</div>
+        <div id="auth-guest" hidden>
+          <div class="auth-tabs" role="tablist" aria-label="登录或注册">
+            <button type="button" id="login-tab" role="tab" aria-selected="true" aria-controls="login-panel">登录</button>
+            <button type="button" id="register-tab" role="tab" aria-selected="false" aria-controls="register-panel">注册</button>
+          </div>
+          <p id="auth-notice" class="auth-notice" role="status" aria-live="polite" hidden></p>
+          <div id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+            <h2>欢迎回来</h2>
+            <form id="login-form">
+              <label>邮箱地址<input name="email" type="email" autocomplete="email" required /></label>
+              <label>密码<input name="password" type="password" autocomplete="current-password" required /></label>
+              <button class="primary-button" type="submit">登录</button>
+            </form>
+            <button id="resend-toggle" class="text-button" type="button">未收到验证邮件？重新发送</button>
+          </div>
+          <div id="register-panel" role="tabpanel" aria-labelledby="register-tab" hidden>
+            <h2>创建账号</h2>
+            <form id="register-form">
+              <label>称呼<input name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required /></label>
+              <label>邮箱地址<input name="email" type="email" autocomplete="email" required /></label>
+              <label>密码<input name="password" type="password" autocomplete="new-password" minlength="8" required /></label>
+              <label>确认密码<input name="confirm" type="password" autocomplete="new-password" minlength="8" required /></label>
+              <button class="primary-button" type="submit">注册并发送验证邮件</button>
+            </form>
+          </div>
+          <div id="resend-panel" hidden>
+            <h2>重新发送验证邮件</h2>
+            <p>输入注册时使用的邮箱地址。</p>
+            <form id="resend-form">
+              <label>邮箱地址<input name="email" type="email" autocomplete="email" required /></label>
+              <button class="primary-button" type="submit">发送验证邮件</button>
+            </form>
+            <button id="back-login" class="text-button" type="button">返回登录</button>
+          </div>
+        </div>
+        <div id="auth-user" hidden>
+          <p class="section-kicker">SIGNED IN</p>
+          <h2>已登录</h2>
+          <p id="user-email" class="user-email"></p>
+          <a class="account-directory" href="./divisions.html">浏览行政区划 <span aria-hidden="true">→</span></a>
+          <button id="logout" class="secondary-button" type="button">退出登录</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

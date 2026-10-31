@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="浏览中国省、地、县三级行政区划与行政区划代码。" />
+    <title>中国行政区划</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="shell masthead-inner">
+        <div class="brand" aria-label="中国行政区划">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>行政区划目录</span>
+        </div>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="./index.html" aria-current="page">首页</a>
+          <a href="./divisions.html">行政区划</a>
+          <a href="./account.html" id="account-link">登录 / 注册</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="home-intro">
+        <div class="shell">
+          <p class="eyebrow">NATIONAL DIVISION INDEX · 2025</p>
+          <h1>中国行政区划</h1>
+          <p>从省级到县级，按行政区划代码查找每一个词条。</p>
+          <form class="home-search" action="./divisions.html" method="get">
+            <label class="sr-only" for="home-query">搜索行政区划</label>
+            <input id="home-query" name="q" type="search" placeholder="输入省、市、县名称或行政区划代码" required />
+            <button type="submit">查询目录 <span aria-hidden="true">→</span></button>
+          </form>
+          <a class="browse-link" href="./divisions.html">浏览完整目录 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <section class="home-content shell" aria-labelledby="quick-title">
+        <div class="home-summary">
+          <div><strong>34</strong><span>省级行政区</span></div>
+          <div><strong>333</strong><span>地级行政区</span></div>
+          <div><strong>2,847</strong><span>县级行政区</span></div>
+          <p>数据截至 2025 年 12 月 31 日<br />来源：民政部行政区划代码</p>
+        </div>
+        <div class="quick-heading">
+          <div>
+            <p class="section-kicker">QUICK ACCESS</p>
+            <h2 id="quick-title">常用地区</h2>
+          </div>
+          <a href="./divisions.html">查看全部 <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="quick-grid">
+          <a href="./divisions.html?q=110000"><span>北京市</span><code>110000</code></a>
+          <a href="./divisions.html?q=310000"><span>上海市</span><code>310000</code></a>
+          <a href="./divisions.html?q=440000"><span>广东省</span><code>440000</code></a>
+          <a href="./divisions.html?q=330000"><span>浙江省</span><code>330000</code></a>
+          <a href="./divisions.html?q=510000"><span>四川省</span><code>510000</code></a>
+          <a href="./divisions.html?q=650000"><span>新疆维吾尔自治区</span><code>650000</code></a>
+        </div>
+      </section>
+    </main>
+    <footer class="shell footer">
+      <span>数据来源：<a href="https://dmfw.mca.gov.cn/XzqhVersionPublish.html" target="_blank" rel="noopener noreferrer">民政部行政区划代码</a>。行政区划信息可不登录直接查阅。</span>
+    </footer>
+  </body>
+</html>

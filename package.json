@@ -1,0 +1,19 @@
+{
+  "name": "china-divisions",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server/index.mjs",
+    "start": "NODE_ENV=production node --env-file-if-exists=.env server/index.mjs",
+    "test": "node --test",
+    "build:data": "node scripts/build-data.mjs"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dependencies": {
+    "better-auth": "^1.5.0",
+    "express": "^5.0.0",
+    "nodemailer": "^7.0.0"
+  }
+}

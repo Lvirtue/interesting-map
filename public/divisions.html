@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="按行政区划代码浏览全国省、地、县三级行政区划。" />
+    <title>行政区划目录 · 中国行政区划</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./divisions.js" defer></script>
+    <script src="./site.js" defer></script>
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="shell masthead-inner">
+        <div class="brand" aria-label="中国行政区划目录">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>行政区划目录</span>
+        </div>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./divisions.html" aria-current="page">行政区划</a>
+          <a href="./account.html" id="account-link">登录 / 注册</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <div class="heading">
+        <div>
+          <p class="eyebrow">全国行政区划代码</p>
+          <h1>中国行政区划</h1>
+          <p class="subtitle">按行政区划代码，逐级查阅全国省级、地级与县级行政区划。</p>
+        </div>
+        <div class="edition">
+          <span class="edition-label">数据截止</span>
+          <strong>2025.12.31</strong>
+          <span>民政部公开数据</span>
+        </div>
+      </div>
+
+      <div class="overview" aria-label="行政区划数量">
+        <div><strong id="province-count">34</strong><span>省级行政区</span></div>
+        <div><strong id="prefecture-count">333</strong><span>地级行政区</span></div>
+        <div><strong id="county-count">2847</strong><span>县级行政区</span></div>
+        <span class="overview-note">点击词条，沿行政层级展开</span>
+      </div>
+
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="directory-heading">
+          <div>
+            <p class="section-kicker">DIVISION INDEX</p>
+            <h2 id="directory-title">行政区划列表</h2>
+          </div>
+          <div class="directory-actions">
+            <button id="expand-all" type="button">全部展开</button>
+            <button id="collapse-all" type="button">全部收起</button>
+          </div>
+        </div>
+
+        <div class="view-controls">
+          <div class="view-switch" role="group" aria-label="目录视图">
+            <button id="hierarchy-view" type="button" aria-pressed="true">按层级</button>
+            <button id="type-view" type="button" aria-pressed="false">按类型</button>
+          </div>
+          <label id="type-picker" class="type-picker" hidden>
+            <span>行政区类型</span>
+            <select id="type-filter" aria-label="行政区类型"></select>
+          </label>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-field">
+            <span class="search-symbol" aria-hidden="true"></span>
+            <span class="sr-only">搜索名称或行政区划代码</span>
+            <input id="search" type="search" placeholder="搜索名称或行政区划代码" autocomplete="off" />
+            <kbd class="search-hint">/</kbd>
+          </label>
+          <span id="result-count" class="result-count" role="status" aria-live="polite">34 个省级行政区</span>
+        </div>
+
+        <div class="column-heading" aria-hidden="true">
+          <span>行政区划</span><span>类型</span><span>行政区划代码</span>
+        </div>
+        <div id="tree" class="tree" role="tree" aria-label="全国行政区划"></div>
+        <div id="empty" class="empty" hidden>没有找到匹配的行政区划。请尝试其他名称或代码。</div>
+      </section>
+
+      <footer class="footer">
+        <span>数据来源：<a href="https://dmfw.mca.gov.cn/XzqhVersionPublish.html" target="_blank" rel="noopener noreferrer">民政部行政区划代码</a>，截至 2025 年 12 月 31 日。</span>
+        <span>港澳台仅展示省级；台湾省代码在来源中标为资料暂缺。省、地级代码按六位格式补零展示。</span>
+      </footer>
+    </main>
+  </body>
+</html>
