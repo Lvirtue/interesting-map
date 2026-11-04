@@ -1,0 +1,127 @@
+{
+  "asOf": "2025-12-31",
+  "scope": "已核实的部分地级历史停用代码，非完整历年目录",
+  "historicalCodeSource": {
+    "title": "吉林省统计局：全国县及县以上行政区划代码表（GB/T 2260-1999）",
+    "url": "https://tjj.jl.gov.cn/tjsj/tjbz/200805/t20080520_5118059.html"
+  },
+  "records": [
+    {
+      "code": "371200",
+      "name": "莱芜市",
+      "type": "地级市",
+      "province": "山东省",
+      "year": 2018,
+      "change": "国务院批准撤销地级莱芜市，将其所辖区域划归济南市；原莱城区、钢城区分别调整为济南市莱芜区、钢城区。",
+      "successor": { "code": "370100", "name": "济南市", "relation": "并入" },
+      "source": {
+        "title": "济南市人民政府：历史概况",
+        "url": "https://www.jinan.gov.cn/col24703/art/2024/art_24703_1685067.html"
+      }
+    },
+    {
+      "code": "542100",
+      "name": "昌都地区",
+      "type": "地区",
+      "province": "西藏自治区",
+      "year": 2014,
+      "change": "国务院批准撤销昌都地区和昌都县，设立地级昌都市；原昌都县行政区域设立卡若区。",
+      "successor": { "code": "540300", "name": "昌都市", "relation": "撤地设市" },
+      "source": {
+        "title": "西藏自治区民政厅：国函〔2014〕143号",
+        "url": "https://mzt.xizang.gov.cn/xxgk/zcfg/201707/t20170728_101238.html"
+      }
+    },
+    {
+      "code": "542200",
+      "name": "山南地区",
+      "type": "地区",
+      "province": "西藏自治区",
+      "year": 2016,
+      "change": "国务院批准撤销山南地区和乃东县，设立地级山南市；原乃东县行政区域设立乃东区。",
+      "successor": { "code": "540500", "name": "山南市", "relation": "撤地设市" },
+      "source": {
+        "title": "西藏自治区民政厅：国函〔2016〕8号",
+        "url": "https://mzt.xizang.gov.cn/xxgk/zcfg/201707/t20170728_101241.html"
+      }
+    },
+    {
+      "code": "542300",
+      "name": "日喀则地区",
+      "type": "地区",
+      "province": "西藏自治区",
+      "year": 2014,
+      "change": "国务院批准撤销日喀则地区和原县级日喀则市，设立地级日喀则市；原县级市行政区域设立桑珠孜区。",
+      "successor": { "code": "540200", "name": "日喀则市", "relation": "撤地设市" },
+      "source": {
+        "title": "西藏自治区民政厅：国函〔2014〕79号",
+        "url": "https://mzt.xizang.gov.cn/xxgk/zcfg/201707/t20170728_101240.html"
+      }
+    },
+    {
+      "code": "542400",
+      "name": "那曲地区",
+      "type": "地区",
+      "province": "西藏自治区",
+      "year": 2017,
+      "change": "国务院批准撤销那曲地区和那曲县，设立地级那曲市；原那曲县行政区域设立色尼区。",
+      "successor": { "code": "540600", "name": "那曲市", "relation": "撤地设市" },
+      "source": {
+        "title": "西藏自治区人民政府：国函〔2017〕109号",
+        "url": "https://www.xizang.gov.cn/xwzx_406/dsdt/201812/t20181217_24220.html"
+      }
+    },
+    {
+      "code": "542600",
+      "name": "林芝地区",
+      "type": "地区",
+      "province": "西藏自治区",
+      "year": 2015,
+      "change": "国务院批准撤销林芝地区和林芝县，设立地级林芝市；原林芝县行政区域设立巴宜区。",
+      "successor": { "code": "540400", "name": "林芝市", "relation": "撤地设市" },
+      "source": {
+        "title": "西藏自治区民政厅：国函〔2015〕51号",
+        "url": "https://mzt.xizang.gov.cn/xxgk/zcfg/201707/t20170728_101239.html"
+      }
+    },
+    {
+      "code": "632100",
+      "name": "海东地区",
+      "type": "地区",
+      "province": "青海省",
+      "year": 2013,
+      "change": "国务院批准撤销海东地区，设立地级海东市；同时调整原乐都县为乐都区。",
+      "successor": { "code": "630200", "name": "海东市", "relation": "撤地设市" },
+      "source": {
+        "title": "青海省人大常委会：关于成立海东市第一届人民代表大会筹备组的说明",
+        "url": "https://www.qhrd.gov.cn/zyfb/cwhgb_4710/lncwhgb/2013n_4721/201309/t20130910_54159.html"
+      }
+    },
+    {
+      "code": "652100",
+      "name": "吐鲁番地区",
+      "type": "地区",
+      "province": "新疆维吾尔自治区",
+      "year": 2015,
+      "change": "国务院批准撤销吐鲁番地区，设立地级吐鲁番市；原县级吐鲁番市调整为高昌区。",
+      "successor": { "code": "650400", "name": "吐鲁番市", "relation": "撤地设市" },
+      "source": {
+        "title": "新疆维吾尔自治区人民政府：国函〔2015〕52号",
+        "url": "https://www.xinjiang.gov.cn/xinjiang/gfxwj/201504/9a7f20ed572c40539f76774c3850e690.shtml"
+      }
+    },
+    {
+      "code": "652200",
+      "name": "哈密地区",
+      "type": "地区",
+      "province": "新疆维吾尔自治区",
+      "year": 2016,
+      "change": "国务院批准撤销哈密地区，设立地级哈密市；原县级哈密市调整为伊州区。",
+      "successor": { "code": "650500", "name": "哈密市", "relation": "撤地设市" },
+      "source": {
+        "title": "新疆维吾尔自治区人民政府：国函〔2016〕9号",
+        "url": "https://www.xinjiang.gov.cn/xinjiang/gfxwj/201602/d5fa854c7b3d4a47b9434953fe11b0a6.shtml"
+      }
+    }
+  ]
+}

@@ -8,9 +8,9 @@ certs/
 *.pem
 *.key
 
-# Dependencies
-node_modules/
-
-# macOS metadata
+# Local editor files and backups
+.idea/
+*.bak
 ._*
 .DS_Store
+__pycache__/

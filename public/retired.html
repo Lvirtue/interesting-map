@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="查阅已核实的地级历史行政区划代码及调整去向。" />
+    <title>历史代码 · 中国行政区划</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+    <script src="./retired.js" type="module"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="shell masthead-inner">
+        <div class="brand" aria-label="中国行政区划">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>中国行政区划</span>
+        </div>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./divisions.html">行政区划</a>
+          <a href="./retired.html" aria-current="page">历史代码</a>
+          <a href="./account.html" id="account-link">登录 / 注册</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell">
+      <div class="heading">
+        <div>
+          <p class="eyebrow">历史行政区划</p>
+          <h1>已停用代码</h1>
+          <p class="subtitle">地级及以上行政区划调整记录，按原代码排序。</p>
+        </div>
+        <div class="edition">
+          <span class="edition-label">现行代码对照</span>
+          <strong>2025.12.31</strong>
+        </div>
+      </div>
+      <section class="directory retired-directory" aria-labelledby="retired-title">
+        <div class="directory-heading">
+          <div>
+            <p class="section-kicker">HISTORICAL CODES</p>
+            <h2 id="retired-title">已核实条目</h2>
+          </div>
+          <div class="directory-actions">
+            <button id="export-csv" type="button" disabled>导出 CSV</button>
+            <button id="export-json" type="button" disabled>导出 JSON</button>
+          </div>
+        </div>
+        <p class="retired-note">目前仅收录有历史代码及调整依据可核对的条目，并非全部历年停用代码。批复年份不等于代码停用的具体日期。</p>
+        <div class="toolbar">
+          <label class="search-field">
+            <span class="search-symbol" aria-hidden="true"></span>
+            <span class="sr-only">搜索历史行政区划</span>
+            <input id="retired-search" type="search" placeholder="搜索旧代码、名称或现行区划" autocomplete="off" />
+          </label>
+          <span id="retired-count" class="result-count" role="status" aria-live="polite">正在读取…</span>
+        </div>
+        <div class="retired-columns" aria-hidden="true"><span>原行政区划</span><span>调整年份</span><span>现行对应区划</span><span>原代码</span></div>
+        <div id="retired-list" class="retired-list"></div>
+        <div id="retired-empty" class="empty" hidden>没有找到匹配的历史代码。</div>
+      </section>
+      <footer class="footer">
+        <span>历史代码与调整依据见各条详情；现行区划对照截至 2025 年 12 月 31 日。</span>
+      </footer>
+    </main>
+  </body>
+</html>

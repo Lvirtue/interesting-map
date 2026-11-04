@@ -12,6 +12,7 @@ const viewButtons = {
   type: document.getElementById("type-view"),
 };
 const expanded = new Set();
+let profileCodes = new Set();
 let query = "";
 let view = "hierarchy";
 
@@ -113,6 +114,14 @@ function createNode(node, term, ancestors = []) {
     });
   }
   wrapper.append(row);
+  if (node.level === 2 && profileCodes.has(node.code) && node.matched !== false) {
+    const detail = document.createElement("a");
+    detail.className = "profile-link";
+    detail.href = `./prefecture.html?code=${encodeURIComponent(node.code)}`;
+    detail.textContent = "详情 ↗";
+    detail.setAttribute("aria-label", `查看${node.name}概况与沿革`);
+    wrapper.append(detail);
+  }
 
   if (open) {
     const group = document.createElement("div");
@@ -198,3 +207,18 @@ if (initialQuery) {
   query = initialQuery.trim();
   render();
 }
+
+fetch("./prefecture-profiles.json")
+  .then((response) => {
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  })
+  .then((data) => {
+    profileCodes = new Set(data.records.map((record) => record.code));
+    document.getElementById("profile-coverage").textContent =
+      `地级概况已收录 ${data.availableCount}/${data.totalCount} 条；其余词条资料仍在整理。`;
+    render();
+  })
+  .catch(() => {
+    document.getElementById("profile-coverage").textContent = "地级概况资料暂不可用。";
+  });

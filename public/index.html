@@ -8,33 +8,77 @@
     <title>中国行政区划</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./site.js" defer></script>
+    <script src="./map.js" defer></script>
   </head>
   <body>
     <header class="masthead">
       <div class="shell masthead-inner">
         <div class="brand" aria-label="中国行政区划">
           <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span>行政区划目录</span>
+          <span>中国行政区划</span>
         </div>
         <nav class="site-nav" aria-label="主导航">
           <a href="./index.html" aria-current="page">首页</a>
           <a href="./divisions.html">行政区划</a>
+          <a href="./retired.html">历史代码</a>
           <a href="./account.html" id="account-link">登录 / 注册</a>
         </nav>
       </div>
     </header>
     <main>
+      <section class="map-workspace shell">
+        <div class="map-heading">
+          <div>
+            <p class="eyebrow">行政区划地图 · 矢量边界</p>
+            <h1 id="map-title">中国行政区划</h1>
+            <p id="map-subtitle">选择省级行政区，查看概况与地级行政区划。</p>
+          </div>
+          <a class="map-back" id="map-back" href="./index.html" hidden>← 返回全国</a>
+        </div>
+        <div class="map-layout">
+          <div class="map-main">
+            <div class="map-stage" id="map-stage">
+              <svg id="division-map" viewBox="0 0 1200 810" role="img" aria-label="全国省级行政区划地图"></svg>
+              <div class="map-zoom" aria-label="地图缩放">
+                <button type="button" id="map-zoom-in" title="放大地图" aria-label="放大地图">+</button>
+                <span id="map-zoom-level" aria-live="off">100%</span>
+                <button type="button" id="map-zoom-out" title="缩小地图" aria-label="缩小地图">−</button>
+                <button type="button" id="map-zoom-reset" title="重置地图缩放" aria-label="重置地图缩放">↺</button>
+              </div>
+              <div class="map-popover" id="map-popover" hidden>
+                <div class="map-popover-top">
+                  <strong id="map-popover-name"></strong>
+                  <a id="map-popover-link" href="#" aria-label="查看省级行政区划图" title="查看省级行政区划图">›</a>
+                </div>
+                <span id="map-popover-code"></span>
+                <p id="map-popover-summary"></p>
+                <a class="map-popover-source" id="map-popover-source" href="#" target="_blank" rel="noopener noreferrer" hidden>中文维基百科 · 原文版本</a>
+              </div>
+            </div>
+            <p class="map-credit">边界矢量数据：<a href="https://github.com/BarbarossaWang/cn-atlas" target="_blank" rel="noopener noreferrer">cn-atlas（2023）</a>，源自 shengshixian.com；行政区划名称与代码：<a href="https://dmfw.mca.gov.cn/XzqhVersionPublish.html" target="_blank" rel="noopener noreferrer">民政部（2025-12-31）</a>。边界与名录年份不同，仅供浏览，不作法定边界依据；台湾省代码在官方数据中资料暂缺。</p>
+          </div>
+          <aside class="map-sidebar">
+            <div class="map-sidebar-heading">
+              <h2 id="map-list-title">省级行政区</h2>
+              <span id="map-count">34</span>
+            </div>
+            <div class="map-list" id="map-list" aria-label="行政区划列表"></div>
+          </aside>
+        </div>
+        <p class="map-status" id="map-status" role="status">正在加载本地地图…</p>
+      </section>
       <section class="home-intro">
-        <div class="shell">
-          <p class="eyebrow">NATIONAL DIVISION INDEX · 2025</p>
-          <h1>中国行政区划</h1>
-          <p>从省级到县级，按行政区划代码查找每一个词条。</p>
+        <div class="shell home-intro-inner">
+          <div>
+            <p class="eyebrow">NATIONAL DIVISION INDEX · 2025</p>
+            <h2>按名称与代码查询</h2>
+            <p>从省级到县级，按行政区划代码查找每一个词条。</p>
+          </div>
           <form class="home-search" action="./divisions.html" method="get">
             <label class="sr-only" for="home-query">搜索行政区划</label>
-            <input id="home-query" name="q" type="search" placeholder="输入省、市、县名称或行政区划代码" required />
+            <input id="home-query" name="q" type="search" placeholder="输入省、市、县名称或代码" required />
             <button type="submit">查询目录 <span aria-hidden="true">→</span></button>
           </form>
-          <a class="browse-link" href="./divisions.html">浏览完整目录 <span aria-hidden="true">→</span></a>
         </div>
       </section>
       <section class="home-content shell" aria-labelledby="quick-title">
@@ -58,6 +102,13 @@
           <a href="./divisions.html?q=330000"><span>浙江省</span><code>330000</code></a>
           <a href="./divisions.html?q=510000"><span>四川省</span><code>510000</code></a>
           <a href="./divisions.html?q=650000"><span>新疆维吾尔自治区</span><code>650000</code></a>
+        </div>
+        <div class="historical-entry">
+          <div>
+            <p class="section-kicker">HISTORICAL CODES</p>
+            <h2>历史行政区划代码</h2>
+          </div>
+          <a href="./retired.html">查阅已停用代码 <span aria-hidden="true">→</span></a>
         </div>
       </section>
     </main>

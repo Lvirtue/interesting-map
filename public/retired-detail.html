@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>历史代码详情 · 中国行政区划</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+    <script src="./retired-detail.js" type="module"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="shell masthead-inner">
+        <div class="brand" aria-label="中国行政区划">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>中国行政区划</span>
+        </div>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./divisions.html">行政区划</a>
+          <a href="./retired.html" aria-current="page">历史代码</a>
+          <a href="./account.html" id="account-link">登录 / 注册</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell retired-detail">
+      <a class="back-link" href="./retired.html">← 返回历史代码</a>
+      <div id="detail-loading" role="status">正在读取…</div>
+      <article id="detail" hidden>
+        <p class="eyebrow">历史行政区划 · 地级</p>
+        <h1 id="detail-name"></h1>
+        <div class="retired-meta">
+          <div><span>原行政区划代码</span><strong id="detail-code"></strong></div>
+          <div><span>原类型</span><strong id="detail-type"></strong></div>
+          <div><span>所属省级行政区</span><strong id="detail-province"></strong></div>
+          <div><span>调整批准年份</span><strong id="detail-year"></strong></div>
+        </div>
+        <section class="retired-section">
+          <h2>调整原因</h2>
+          <p id="detail-change"></p>
+        </section>
+        <section class="retired-section">
+          <h2>现行对应区划</h2>
+          <p id="detail-relation"></p>
+          <a id="detail-successor" href="./divisions.html"></a>
+        </section>
+        <section class="retired-section">
+          <h2>资料依据</h2>
+          <p><a id="detail-decision" target="_blank" rel="noopener noreferrer"></a></p>
+          <p><a id="detail-history" target="_blank" rel="noopener noreferrer"></a></p>
+          <p class="retired-note">历史代码以旧版区划代码表为依据；调整以批复或政府公开资料为依据。批准年份并非具体停用日期；对应关系仅说明地级调整，不代表所有下辖县区代码均直接延续。</p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>地级行政区详情 · 中国行政区划</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+    <script src="./prefecture.js" type="module"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="shell masthead-inner">
+        <div class="brand" aria-label="中国行政区划">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>中国行政区划</span>
+        </div>
+        <nav class="site-nav" aria-label="主导航">
+          <a href="./index.html">首页</a>
+          <a href="./divisions.html" aria-current="page">行政区划</a>
+          <a href="./retired.html">历史代码</a>
+          <a href="./account.html" id="account-link">登录 / 注册</a>
+        </nav>
+      </div>
+    </header>
+    <main class="shell retired-detail">
+      <a class="back-link" href="./divisions.html">← 返回行政区划</a>
+      <div id="profile-status" role="status">正在读取…</div>
+      <article id="profile" hidden>
+        <p class="eyebrow">地级行政区概况</p>
+        <h1 id="profile-name"></h1>
+        <div class="retired-meta profile-meta">
+          <div><span>行政区划代码</span><strong id="profile-code"></strong></div>
+          <div><span>行政区类型</span><strong id="profile-type"></strong></div>
+          <div><span>所属省级行政区</span><strong id="profile-province"></strong></div>
+        </div>
+        <p id="profile-summary" class="profile-summary" hidden></p>
+        <div id="profile-fields"></div>
+        <section id="profile-retired" class="retired-section" hidden>
+          <h2>相关历史代码</h2>
+          <div id="profile-retired-links"></div>
+          <p class="retired-note">仅列出已经核对官方调整依据的记录；百科沿革不等于代码停用证明。</p>
+        </section>
+        <section class="retired-section">
+          <h2>资料来源</h2>
+          <p><a id="profile-source" target="_blank" rel="noopener noreferrer">中文维基百科原文</a></p>
+          <p id="profile-revision"></p>
+          <p class="retired-note">概述由百科原文自动摘录、有删节，按 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> 署名共享；并非官方统计或实时数据。人口和经济数字以原文所述年份为准，建议通过原文及统计公报进一步核实。行政代码来自民政部 2025 年末快照。</p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

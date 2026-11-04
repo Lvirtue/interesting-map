@@ -6,7 +6,10 @@
     "dev": "node --env-file-if-exists=.env server/index.mjs",
     "start": "NODE_ENV=production node --env-file-if-exists=.env server/index.mjs",
     "test": "node --test",
-    "build:data": "node scripts/build-data.mjs"
+    "build:data": "node scripts/build-data.mjs",
+    "build:map": "node scripts/build-map.mjs",
+    "fetch:profiles": "python3 scripts/fetch-prefecture-dump.py",
+    "build:profiles": "node scripts/build-profiles.mjs"
   },
   "engines": {
     "node": ">=22.13.0"
@@ -15,5 +18,10 @@
     "better-auth": "^1.5.0",
     "express": "^5.0.0",
     "nodemailer": "^7.0.0"
+  },
+  "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
+    "wtf_wikipedia": "^10.4.2"
   }
 }
